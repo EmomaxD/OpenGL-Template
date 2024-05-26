@@ -4,10 +4,12 @@ CMakeCache.txt
 cmake_install.cmake
 *.exe
 /Makefile
-Vendor/glew/lib
 OpenGL
 .vscode
 
+*.so.2.2
+*.so.2.2.0
+glew.pc
 
 # Prerequisites
 *.d
