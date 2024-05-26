@@ -1,9 +1,9 @@
 #Custom
 CMakeFiles
 CMakeCache.txt
-Makefile
 cmake_install.cmake
 *.exe
+/Makefile
 Vendor/glew/lib
 OpenGL
 .vscode
