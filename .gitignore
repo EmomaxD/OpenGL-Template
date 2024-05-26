@@ -1,3 +1,14 @@
+#Custom
+CMakeFiles
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+*.exe
+Vendor/glew/lib
+OpenGL
+.vscode
+
+
 # Prerequisites
 *.d
 
