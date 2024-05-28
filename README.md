@@ -36,6 +36,21 @@ After building the project, return to the root directory and run the application
 ./run.sh
 ```
 
-# Platform Support
+# Windows
 
-Currently, only Unix-based systems (Linux, macOS) are supported for building and running this project. Windows support is not yet available.
+You need to run the bat files in the Build folder
+
+```sh
+cd Build
+
+build-glfw.bat
+
+build.bat
+```
+
+### GLEW binaries are already included for Windows
+
+## To run the project
+You have to have Visual Studio<br>
+Check the OUT/ directory<br>
+Open up the created solution file and set OpenGL as startup project

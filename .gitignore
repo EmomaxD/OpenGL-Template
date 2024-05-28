@@ -7,6 +7,17 @@ cmake_install.cmake
 OpenGL
 .vscode
 
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+.sln
+x64/
+.vs/
+
+Out/
+OpenGL.dir/
+
+
 *.so.2.2
 *.so.2.2.0
 glew.pc

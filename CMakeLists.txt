@@ -8,15 +8,15 @@ set(GLEW_DIR "${CMAKE_SOURCE_DIR}/Vendor/glew")
 set(GLFW_DIR "${CMAKE_SOURCE_DIR}/Vendor/glfw")
 set(IMGUI_DIR "${CMAKE_SOURCE_DIR}/Vendor/imgui")
 
+
+# Set the output directory for all build files to 'OUT'
+set(CMAKE_BINARY_DIR "${CMAKE_SOURCE_DIR}/OUT")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}")
+
 # Add compile options
 set(CMAKE_BUILD_TYPE Release)  # Set the build type to Release
-
-add_compile_options(
-    -O3             # Optimization level 2
-    -Wall           # Enable most warnings
-    -Wextra         # Enable extra warnings not included in -Wall
-    #-Werror         # Treat warnings as errors
-)
 
 # Collect all source files
 file(GLOB SRC_FILES "Engine/Core/*.cpp"
@@ -44,8 +44,8 @@ target_include_directories(OpenGL PRIVATE
 # Link directories
 if(WIN32)
     target_link_directories(OpenGL PRIVATE 
-        ${GLFW_DIR}/lib-vc2022 
-        ${GLEW_DIR}/lib/Release/x64
+        ${GLFW_DIR}/install/lib
+        ${GLEW_DIR}/Windows/lib/Release/x64
     )
 elseif(UNIX)
     target_link_directories(OpenGL PRIVATE 
@@ -77,4 +77,4 @@ else()
 endif()
 
 # Set the output directory for the executable if needed
-# set_target_properties(Engine PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/build")
+#set_target_properties(OpenGL PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Out")
