@@ -4,5 +4,10 @@
 ./build-glew.sh
 ./build-glfw.sh
 
-cmake .
-make 
+cd ..
+
+cmake -S . -B OUT/
+
+cd OUT
+
+make

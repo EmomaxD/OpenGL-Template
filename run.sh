@@ -1,4 +1,8 @@
 #!/bin/bash
-cmake .
+cmake -S . -B OUT/
+
+cd OUT
+
 make
+
 ./OpenGL
